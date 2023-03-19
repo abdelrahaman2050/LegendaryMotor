@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <title>Legendary Motorsport</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/LegendaryMotorsport-GTAV-Logo.webp">
+  <a href="1HOME.html">
+  <img src="images/ho.jpg" width="1520">
+</a>
+</head>
+
+<body bgcolor="#800000">
+  <br>
+  <br>
+
+  <div style="background-color: rgb(55, 1, 1); color: white;" class="car-modification">
+    <h2>Car Modification</h2>
+
+    <div>
+      
+      <img src="images/SaveMe.jpg" style="float: right;margin-right: 50px;margin-bottom: 100px;margin-top: 30px;"
+       width="400px" download="miss.jpg"
+    </div>
+  
+    
+  
+    <div class="mod-options">
+      <h3 style="color: white;">Wheel Type:</h3>
+      <select name="wheel-type">
+        <option value="stock">Stock</option>
+        <option value="lowrider">Lowrider</option>
+        <option value="muscle">Muscle</option>
+        <option value="sports">Sports</option>
+      </select>
+    </div>
+  
+    <div class="mod-options">
+      <h3 style="color: white;">Suspension:</h3>
+      <input type="radio" id="stock-suspension" name="suspension" value="stock" checked>
+      <label for="stock-suspension">Stock</label>
+      <br>
+      <input type="radio" id="lowered-suspension" name="suspension" value="lowered">
+      <label for="lowered-suspension">Lowered</label>
+      <br>
+      <input type="radio" id="slammed-suspension" name="suspension" value="slammed">
+      <label for="slammed-suspension">Slammed</label>
+
+    </div>
+  
+    <div class="mod-options">
+      <h3 style="color: white;">Exhaust:</h3>
+      <input type="checkbox" id="custom-exhaust" name="exhaust" value="custom">
+      <label for="custom-exhaust">Custom</label>
+    </div>
+  
+    <div class="mod-options">
+      <h3 style="color: white;">Paint Color:</h3>
+      <input type="color" id="paint-color" name="paint-color" value="#DC143C">
+    </div>
+  
+    <button class="apply-mods-btn" onclick="downloadImage()">ORDER</button>
+  </div>
+  
+  <script>
+    function downloadImage() {
+      const image = document.querySelector('img[download]');
+      const url = image.getAttribute('src');
+      const filename = image.getAttribute('download');
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+    }
+  </script>
+  
+  </body>
+  </html>
+</html>

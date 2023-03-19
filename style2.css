@@ -1,0 +1,16 @@
+.button {
+    border-radius: 20%;
+    background-color: black;
+    color: white;
+    margin: 14px;
+    border: 2px solid brown;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: brown;
+    color: white;
+  }
